@@ -5,13 +5,12 @@ const {
 } = require('../utils/constant')
 const express = require('express')
 const boom = require('boom')
-const userRouter = require('./user')
+const userRouter = require('./users')
 
 // 注册路由
 const router = express.Router()
 
 // 对后续请求进行身份验证
-router.use(jwtAuth)
 
 router.get('/', function(req, res) {
   res.send('欢迎学习小慕读书管理后台')
